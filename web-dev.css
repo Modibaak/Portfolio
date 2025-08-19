@@ -45,16 +45,22 @@ body.web-dev-page {
 .web-dev-page .website-gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* aligns items horizontally */
   gap: 20px;
+  padding: 20px;
 }
 
+
 .web-dev-page .website-item {
-  background-color: #f48fb1; /* bubblegum pink */
+  background-color: #f48fb1;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2); /* subtle pink shadow */
-  width: 250px;
+  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
+  width: 250px; /* ensure all items are same width */
+  box-sizing: border-box; /* important for padding */
+  flex-shrink: 0; /* prevent shrinking */
 }
+
 
 .web-dev-page .website-item h3 {
   color: #880e4f;
@@ -74,3 +80,11 @@ body.web-dev-page {
   padding: 20px;
   margin-top: 40px;
 }
+
+@media (max-width: 768px) {
+  .web-dev-page .website-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
