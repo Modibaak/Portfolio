@@ -339,11 +339,15 @@ line-height: 1.2;
 }
 
 .certificate-box img {
-    width: 100%;
+    width: 100%;          /* fill the column width */
+    height: auto;         /* maintain aspect ratio */
     display: block;
     border-radius: 2rem;
     transition: transform 0.5s ease;
+    object-fit: cover;    /* ensures image covers the container without distortion */
+    max-height: 300px;    /* prevents huge tall images on desktop */
 }
+
 
 .certificate-box:hover img {
     transform: scale(1.05);
