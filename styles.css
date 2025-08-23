@@ -309,7 +309,7 @@ line-height: 1.2;
     margin: 1rem 0 3rem;
 }
 
-/* Certificates Section Code */
+/* Certificates Section */
 .certificates {
     padding: 10rem 9% 5rem;
     background: var(--snd-bg-color);
@@ -322,44 +322,43 @@ line-height: 1.2;
     color: var(--text-color);
 }
 
-/* Desktop: Masonry-style container */
+/* Masonry / Pinterest-style grid */
 .certificates-container {
-    column-count: 2;        /* 2 columns on desktop */
-    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
 }
 
 .certificate-box {
     position: relative;
-    margin-bottom: 2rem;
     border-radius: 2rem;
     overflow: hidden;
-    display: inline-block;
     width: 100%;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .certificate-box img {
-    width: 100%;          /* fill the column width */
-    height: auto;         /* maintain aspect ratio */
-    display: block;
+    width: 100%;
+    height: auto;
     border-radius: 2rem;
     transition: transform 0.5s ease;
-    object-fit: cover;    /* ensures image covers the container without distortion */
-    max-height: 300px;    /* prevents huge tall images on desktop */
+    object-fit: cover;
+    max-height: 350px; /* adjusts height for variety */
 }
 
 .certificate-box:hover img {
     transform: scale(1.05);
 }
 
-/* Overlay that appears on hover */
+/* Overlay for text */
 .certificate-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(199, 21, 133, 0.9); /* main color with opacity */
+    background: rgba(199, 21, 133, 0.9);
     color: var(--bg-color);
     padding: 2rem;
     transform: translateY(100%);
@@ -382,27 +381,15 @@ line-height: 1.2;
     line-height: 1.4;
 }
 
-/* Mobile Responsive */
+/* Responsive: Mobile */
 @media (max-width: 991px) {
-    /* Switch to flex layout on mobile */
     .certificates-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        column-count: unset; /* remove column-count */
+        grid-template-columns: 1fr; /* stack vertically on mobile */
         gap: 2rem;
     }
 
-    .certificate-box {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-    }
-
     .certificate-box img {
-        height: auto;
-        max-height: 250px;  /* adjusts images for mobile */
+        max-height: 250px; /* smaller on mobile */
     }
 
     .certificate-overlay {
@@ -418,9 +405,6 @@ line-height: 1.2;
         line-height: 1.4;
     }
 }
-
-
-
 
 /* Footer Section Code */
 
