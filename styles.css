@@ -61,7 +61,8 @@ section{
     transform: scale(1.05);
 }
 
-.navbar a{
+/* Navbar Links - Desktop */
+.navbar a {
     font-size: 1.9rem;
     color: var(--bg-color);
     margin-left: 4rem;
@@ -69,17 +70,46 @@ section{
     transition: 0.3s ease;
 }
 
-.navbar a:hover,
-.navbar a.active{
-    color: var(--text-color);
-}
-
-#menu-icon{
+/* Hamburger Icon - Hidden on Desktop */
+#menu-icon {
     font-size: 3.6rem;
     color: var(--bg-color);
     cursor: pointer;
-    display: none; /* hidden on desktop */
+    display: none;
 }
+
+/* Mobile Styles */
+@media (max-width: 991px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--main-color);
+        transition: all 0.5s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar a {
+        display: block;
+        padding: 17px;
+        font-size: 2rem;
+        color: var(--bg-color);
+    }
+
+    /* When menu is active */
+    .navbar.active {
+        right: 0;
+    }
+}
+
 
 
 /* Home Section code */
