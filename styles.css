@@ -281,54 +281,76 @@ line-height: 1.2;
 
 /* Certificates Section Code */
 .certificates {
-    padding: 5rem 9% 2rem;
-    background: #f9f9f9;
+    padding: 10rem 9% 2rem;
+    background: var(--snd-bg-color); /* matches About/Services sections */
     text-align: center;
 }
 
 .certificates .heading {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    color: var(--text-color);
 }
 
 .certificates-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
 .certificate-box {
-    background: #fff;
-    border-radius: 20px;
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    border-radius: 2rem;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .certificate-box:hover {
-    transform: translateY(-10px);
+    transform: scale(1.02);
+    box-shadow: 0 0 25px var(--main-color);
 }
 
 .certificate-box img {
     width: 100%;
     height: auto;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid var(--main-color);
 }
 
 .certificate-content {
-    padding: 1.5rem;
+    padding: 2rem;
+    text-align: left;
 }
 
 .certificate-content h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
 }
 
 .certificate-content p {
-    font-size: 1rem;
-    color: #666;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.5;
 }
+
+/* Responsive layout */
+@media (max-width: 991px) {
+    .certificates-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificate-box {
+        width: 90%;
+    }
+}
+
 
 
 /* Footer Section Code */
