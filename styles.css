@@ -309,6 +309,7 @@ line-height: 1.2;
     margin: 1rem 0 3rem;
 }
 
+/* Certificates Section Code */
 .certificates {
     padding: 10rem 9% 5rem;
     background: var(--snd-bg-color);
@@ -321,7 +322,7 @@ line-height: 1.2;
     color: var(--text-color);
 }
 
-/* Masonry-style container */
+/* Desktop: Masonry-style container */
 .certificates-container {
     column-count: 2;        /* 2 columns on desktop */
     column-gap: 2rem;
@@ -347,7 +348,6 @@ line-height: 1.2;
     object-fit: cover;    /* ensures image covers the container without distortion */
     max-height: 300px;    /* prevents huge tall images on desktop */
 }
-
 
 .certificate-box:hover img {
     transform: scale(1.05);
@@ -382,57 +382,43 @@ line-height: 1.2;
     line-height: 1.4;
 }
 
-/* Mobile responsive */
-@media (max-width: 991px) {
-    .certificates-container {
-        column-count: 1; /* stack cards on mobile */
-    }
-    .certificate-overlay {
-        padding: 1.5rem;
-    }
-}
-
-
 /* Mobile Responsive */
 @media (max-width: 991px) {
+    /* Switch to flex layout on mobile */
     .certificates-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        column-count: unset; /* remove column-count */
+        gap: 2rem;
     }
 
     .certificate-box {
         width: 90%;
         display: flex;
         flex-direction: column;
+        margin-bottom: 2rem;
     }
 
     .certificate-box img {
         height: auto;
-        max-height: 200px;  /* smaller on mobile for better layout */
+        max-height: 250px;  /* adjusts images for mobile */
     }
 
-    .certificate-content {
+    .certificate-overlay {
         padding: 1.5rem;
     }
 
-    .certificate-content p {
+    .certificate-overlay h3 {
+        font-size: 1.8rem;
+    }
+
+    .certificate-overlay p {
         font-size: 1.5rem;
         line-height: 1.4;
     }
 }
 
-
-/* Responsive layout */
-@media (max-width: 991px) {
-    .certificates-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .certificate-box {
-        width: 90%;
-    }
-}
 
 
 
