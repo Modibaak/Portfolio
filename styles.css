@@ -334,7 +334,7 @@ line-height: 1.2;
     flex: 1 1 30rem;
     background: var(--bg-color);
     border-radius: 2rem;
-    overflow: hidden;
+    overflow: visible; /* changed to visible for mobile paragraphs */
     box-shadow: 0 0 25px rgba(0,0,0,0.1);
     transition: 0.3s ease;
     display: flex;
@@ -348,13 +348,16 @@ line-height: 1.2;
 
 .certificate-box img {
     width: 100%;
-    height: auto;
+    height: auto;        /* ensures image scales on mobile */
+    max-height: 250px;   /* optional: prevents huge images pushing text off */
+    object-fit: cover;
     border-bottom: 2px solid var(--main-color);
 }
 
 .certificate-content {
     padding: 2rem;
     text-align: left;
+    flex-grow: 1;         /* allows paragraph to expand */
 }
 
 .certificate-content h3 {
@@ -367,7 +370,37 @@ line-height: 1.2;
     font-size: 1.6rem;
     color: var(--text-color);
     line-height: 1.5;
+    margin-top: 0.5rem;
 }
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .certificates-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificate-box {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .certificate-box img {
+        height: auto;
+        max-height: 200px;  /* smaller on mobile for better layout */
+    }
+
+    .certificate-content {
+        padding: 1.5rem;
+    }
+
+    .certificate-content p {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+}
+
 
 /* Responsive layout */
 @media (max-width: 991px) {
