@@ -328,39 +328,36 @@ line-height: 1.2;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     justify-items: center;
+    align-items: start; /* align items to top */
 }
 
+/* Certificate box */
 .certificate-box {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     border-radius: 2rem;
     overflow: hidden;
     width: 100%;
+    background: var(--bg-color);
     transition: transform 0.3s ease;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
 }
 
+/* Images fully visible, no cropping */
 .certificate-box img {
-    width: 100%;          /* fill card width */
-    height: auto;         /* maintain natural aspect ratio */
+    width: 100%;
+    height: auto;       /* maintain natural aspect ratio */
     display: block;
     border-radius: 2rem 2rem 0 0;
-    transition: transform 0.5s ease;
 }
 
-.certificate-box:hover img {
-    transform: scale(1.03);
-}
-
-/* Overlay for text */
+/* Overlay text at bottom */
 .certificate-overlay {
     background: rgba(199, 21, 133, 0.9);
     color: var(--bg-color);
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: left;
     border-radius: 0 0 2rem 2rem;
-    margin-top: auto; /* push overlay to bottom */
 }
 
 .certificate-overlay h3 {
@@ -370,18 +367,18 @@ line-height: 1.2;
 
 .certificate-overlay p {
     font-size: 1.4rem;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+/* Hover effect */
+.certificate-box:hover {
+    transform: translateY(-5px);
 }
 
 /* Responsive: Mobile */
 @media (max-width: 991px) {
     .certificates-container {
-        grid-template-columns: 1fr; /* stack vertically on mobile */
-        gap: 2rem;
-    }
-
-    .certificate-overlay {
-        padding: 1.5rem;
+        grid-template-columns: 1fr; /* stack vertically */
     }
 
     .certificate-overlay h3 {
@@ -393,6 +390,7 @@ line-height: 1.2;
         line-height: 1.4;
     }
 }
+
 
 
 
