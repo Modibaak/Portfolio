@@ -1,0 +1,100 @@
+/* email-marketing.css */
+body.email-marketing-page {
+  background-color: #fce4ec;
+  font-family: 'Segoe UI', sans-serif;
+  color: #880e4f;
+}
+
+/* Header */
+.email-marketing-page header {
+  background-color: #f8bbd0;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #ec407a;
+}
+
+.email-marketing-page h1 {
+  margin: 0;
+  color: #ad1457;
+}
+
+.email-marketing-page nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.email-marketing-page nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.email-marketing-page nav ul li a {
+  color: #d81b60;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.email-marketing-page nav ul li a:hover {
+  color: #f06292;
+}
+
+/* Section */
+.email-marketing-page section {
+  padding: 40px;
+}
+
+.email-marketing-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Newsletter Gallery */
+.newsletter-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.newsletter-item {
+  background-color: #f48fb1;
+  padding: 15px;
+  border-radius: 10px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.25);
+}
+
+.newsletter-item h3 {
+  color: #880e4f;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-item img {
+  width: 100%;
+  border-radius: 8px;
+  border: 3px solid #ec407a;
+  transition: transform 0.3s ease;
+}
+
+.newsletter-item img:hover {
+  transform: scale(1.03);
+}
+
+/* Footer */
+.email-marketing-page footer {
+  background-color: #f06292;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
