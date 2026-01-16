@@ -399,6 +399,20 @@ line-height: 1.2;
     }
 }
 
+.certificates {
+    margin-top: 10rem; /* separation from services */
+    padding: 10rem 9% 5rem;
+    background: var(--snd-bg-color);
+    text-align: center;
+}
+
+.certificates .heading {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    color: var(--text-color);
+}
+
+
 
 
 
