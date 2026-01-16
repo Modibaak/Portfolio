@@ -268,26 +268,27 @@ line-height: 1.2;
 
 /* Services Section Code */
 
+/* Services Section Code */
+
 .services h2{
     text-align: center;
     margin-bottom: 5rem;
 }
 
 .services-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    align-items: stretch;
 }
 
 .services-container .services-box{
-    flex: 1 1 30rem;
     background: var(--snd-bg-color);
-    padding: 6rem 2rem 6rem;
+    padding: 6rem 2rem;
     border-radius: 2rem;
     text-align: center;
     transition: 0.3s ease;
+    height: 100%;
 }
 
 .services-container .services-box:hover{
@@ -308,6 +309,15 @@ line-height: 1.2;
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
+
+@media (max-width: 768px){
+    .services-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
 
 /* Certificates Section */
 .certificates {
