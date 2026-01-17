@@ -1,5 +1,5 @@
 /* social-media.css */
-body.ads-page {
+body.social-media-page {
   background-color: #ffe4e1; /* misty rose pink */
   font-family: 'Segoe UI', sans-serif;
   color: #880e4f; /* dark pink */
@@ -60,7 +60,7 @@ body.ads-page {
   color: #880e4f;
 }
 
-.social-media-page .v-item img {
+.social-media-page .video-item img {
   max-width: 100%;
   border-radius: 8px;
   margin-top: 10px;
