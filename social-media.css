@@ -1,76 +1,94 @@
-/* social-media.css */
+/* ============================= */
+/* SOCIAL MEDIA MANAGEMENT PAGE */
+/* ============================= */
+
 body.social-media-page {
-  background-color: #ffe4e1; /* misty rose pink */
+  background-color: var(--bg-color);
   font-family: 'Segoe UI', sans-serif;
-  color: #880e4f; /* dark pink */
+  color: var(--text-color);
 }
 
+/* Header */
 .social-media-page header {
-  background-color: #f8bbd0; /* light pink */
-  padding: 20px;
+  background-color: var(--snd-bg-color);
+  padding: 4rem 9%;
   text-align: center;
-  border-bottom: 4px solid #ec407a; /* hot pink */
+  border-bottom: 2px solid var(--main-color);
 }
 
 .social-media-page h1 {
-  margin: 0;
-  color: #ad1457; /* dark rose pink */
+  margin-bottom: 1rem;
+  font-size: 4rem;
 }
 
+/* Navigation */
 .social-media-page nav ul {
   list-style: none;
   padding: 0;
 }
 
 .social-media-page nav ul li {
-  display: inline;
-  margin: 0 10px;
+  display: inline-block;
+  margin: 0 1.5rem;
 }
 
 .social-media-page nav ul li a {
-  color: #d81b60; /* vibrant pink */
+  color: var(--main-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .social-media-page nav ul li a:hover {
-  color: #f06292; /* soft pink */
+  text-decoration: underline;
 }
 
+/* Section spacing (matches Services) */
 .social-media-page section {
-  padding: 40px;
-  background: #fce4ec; /* pale pink */
+  padding: 10rem 9% 5rem;
 }
 
+/* Video / Content Gallery */
 .social-media-page .video-gallery {
   display: flex;
+  justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2rem;
 }
 
+/* Cards (same idea as services-box) */
 .social-media-page .video-item {
-  background-color: #f48fb1; /* bubblegum pink */
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2); /* subtle pink shadow */
-  width: 250px;
+  flex: 1 1 30rem;
+  max-width: 30rem;
+  background: var(--snd-bg-color);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.social-media-page .video-item:hover {
+  transform: translateY(-5px);
+  background-color: var(--main-color);
 }
 
 .social-media-page .video-item h3 {
-  color: #880e4f;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
 }
 
+/* Images (FIXED CLASS NAME) */
 .social-media-page .video-item img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-  border: 3px solid #ec407a; /* hot pink border */
+  width: 100%;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
 }
 
+/* Footer */
 .social-media-page footer {
-  background-color: #f06292;
-  color: white;
+  background-color: var(--snd-bg-color);
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 3rem;
+  margin-top: 8rem;
 }
+
