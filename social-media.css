@@ -1,54 +1,54 @@
-/* ads.css */
+/* social-media.css */
 body.ads-page {
   background-color: #ffe4e1; /* misty rose pink */
   font-family: 'Segoe UI', sans-serif;
   color: #880e4f; /* dark pink */
 }
 
-.ads-page header {
+.social-media-page header {
   background-color: #f8bbd0; /* light pink */
   padding: 20px;
   text-align: center;
   border-bottom: 4px solid #ec407a; /* hot pink */
 }
 
-.ads-page h1 {
+.social-media-page h1 {
   margin: 0;
   color: #ad1457; /* dark rose pink */
 }
 
-.ads-page nav ul {
+.social-media-page nav ul {
   list-style: none;
   padding: 0;
 }
 
-.ads-page nav ul li {
+.social-media-page nav ul li {
   display: inline;
   margin: 0 10px;
 }
 
-.ads-page nav ul li a {
+.social-media-page nav ul li a {
   color: #d81b60; /* vibrant pink */
   text-decoration: none;
   font-weight: bold;
 }
 
-.ads-page nav ul li a:hover {
+.social-media-page nav ul li a:hover {
   color: #f06292; /* soft pink */
 }
 
-.ads-page section {
+.social-media-page section {
   padding: 40px;
   background: #fce4ec; /* pale pink */
 }
 
-.ads-page .video-gallery {
+.social-media-page .video-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.ads-page .video-item {
+.social-media-page .video-item {
   background-color: #f48fb1; /* bubblegum pink */
   padding: 15px;
   border-radius: 10px;
@@ -56,18 +56,18 @@ body.ads-page {
   width: 250px;
 }
 
-.ads-page .video-item h3 {
+.social-media-page .video-item h3 {
   color: #880e4f;
 }
 
-.ads-page .v-item img {
+.social-media-page .v-item img {
   max-width: 100%;
   border-radius: 8px;
   margin-top: 10px;
   border: 3px solid #ec407a; /* hot pink border */
 }
 
-.ads-page footer {
+.social-media-page footer {
   background-color: #f06292;
   color: white;
   text-align: center;
