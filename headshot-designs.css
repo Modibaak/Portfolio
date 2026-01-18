@@ -1,22 +1,24 @@
-/* headshot-designs.css */
+/* Page base */
 body.headshot-designs-page {
-  background-color: #ffe4e1; /* misty rose pink */
+  background-color: #ffe4e1;
   font-family: 'Segoe UI', sans-serif;
-  color: #880e4f; /* dark pink */
+  color: #880e4f;
 }
 
+/* Header */
 .headshot-designs-page header {
-  background-color: #f8bbd0; /* light pink */
-  padding: 20px;
+  background-color: #f8bbd0;
+  padding: 2rem;
   text-align: center;
-  border-bottom: 4px solid #ec407a; /* hot pink */
+  border-bottom: 4px solid #ec407a;
 }
 
 .headshot-designs-page h1 {
   margin: 0;
-  color: #ad1457; /* dark rose pink */
+  color: #ad1457;
 }
 
+/* Navigation */
 .headshot-designs-page nav ul {
   list-style: none;
   padding: 0;
@@ -28,56 +30,83 @@ body.headshot-designs-page {
 }
 
 .headshot-designs-page nav ul li a {
-  color: #d81b60; /* vibrant pink */
+  color: #d81b60;
   text-decoration: none;
   font-weight: bold;
 }
 
-.headhsot-designs-page nav ul li a:hover {
-  color: #f06292; /* soft pink */
+.headshot-designs-page nav ul li a:hover {
+  color: #f06292;
 }
 
+/* Section */
 .headshot-designs-page section {
-  padding: 40px;
-  background: #fce4ec; /* pale pink */
+  padding: 4rem;
+  background: #fce4ec;
 }
 
-.headshot-designs-page .media-section {
+/* GRID: 3 per row */
+.headshots-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* Headshot card */
+.headshot-box {
+  background-color: #f8bbd0;
+  padding: 2rem;
+  border-radius: 50%;
+  text-align: center;
+  aspect-ratio: 1 / 1; /* keeps perfect circle */
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.headhsot-designs-page .media-section {
-  background-color: #f48fb1; /* bubblegum pink */
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2); /* subtle pink shadow */
-  width: 250px;
+/* Pink background on click */
+.headshot-box:active {
+  background-color: #ec407a;
 }
 
-.headshot-designs-page .media-section h3 {
+/* Image inside circle */
+.headshot-box img {
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #ec407a;
+}
+
+/* Label */
+.headshot-box p {
+  margin-top: 1rem;
+  font-weight: bold;
   color: #880e4f;
 }
 
-.headshot-designs-page .media-section img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-  border: 3px solid #ec407a; /* hot pink border */
-}
-
-.headhsot-designs-page footer {
+/* Footer */
+.headshot-designs-page footer {
   background-color: #f06292;
   color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 2rem;
+  margin-top: 4rem;
 }
 
-@media (max-width: 768px) {
-  .web-dev-page .website-gallery {
-    flex-direction: column;
-    align-items: center;
+/* Responsive */
+@media (max-width: 900px) {
+  .headshots-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 500px) {
+  .headshots-container {
+    grid-template-columns: 1fr;
+  }
+}
+
