@@ -566,14 +566,3 @@ line-height: 1.2;
     }
 }
 
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  word-wrap: break-word;
-}
-
-p {
-  line-height: 1.6;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
