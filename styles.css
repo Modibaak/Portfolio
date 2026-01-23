@@ -252,7 +252,7 @@ span{
     padding: 0rem;
 }
 
-.about-conent h2 {
+.about-content h2 {
 text-align: left;
 line-height: 1.2;
 }
@@ -269,7 +269,7 @@ line-height: 1.2;
 .about-content p {
   margin-bottom: 1.5rem;   /* space between paragraphs */
   line-height: 1.8;        /* readability */
-  font-size: 1.7rem;       /* slightly larger text */
+  font-size: 1.8rem;       /* slightly larger text */
   max-width: 650px;
 }
 
