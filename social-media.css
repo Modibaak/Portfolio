@@ -1,4 +1,4 @@
-/* SOCIAL MEDIA MANAGEMENT PAGE   */
+/* SOCIAL MEDIA MANAGEMENT PAGE */
 
 body.social-media-page {
   background-color: #ffe4e1; /* misty rose pink */
@@ -97,22 +97,21 @@ body.social-media-page {
 /* GLASSDOOR COLLATERAL SECTION */
 .social-media-page .glassdoor-section {
   padding: 10rem 9% 5rem;
-  background: #fce4ec;
+  background: #fce4ec; /* pale pink */
 }
 
 .social-media-page .glassdoor-gallery {
-  display: flex;
-  justify-content: center; /* center the row of cards */
-  align-items: stretch;    /* all cards same height */
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 2rem; /* spacing between cards */
+  justify-items: center; /* center items in each column */
 }
 
 .social-media-page .glassdoor-item {
-  flex: 1 1 30rem;       /* match video-item size */
-  max-width: 30rem;
+  width: 100%;
+  max-width: 30rem; /* same as video cards */
   background-color: #f48fb1;
-  padding: 3rem 2rem;    /* same as video-item */
+  padding: 3rem 2rem; /* same as video cards */
   border-radius: 2rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
@@ -134,6 +133,19 @@ body.social-media-page {
   object-fit: contain;
   border-radius: 1.5rem;
   border: 3px solid #ec407a;
+}
+
+/* Responsive: Glassdoor images 2 per row on tablets, 1 per row on mobile */
+@media (max-width: 900px) {
+  .social-media-page .glassdoor-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .social-media-page .glassdoor-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Footer */
