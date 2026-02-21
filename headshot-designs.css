@@ -1,103 +1,48 @@
-/* Page base */
-body.headshot-designs-page {
-  background-color: #ffe4e1;
-  font-family: 'Segoe UI', sans-serif;
-  color: #880e4f;
-}
-
-/* Header */
-.headshot-designs-page header {
-  background-color: #f8bbd0;
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 4px solid #ec407a;
-}
-
-.headshot-designs-page h1 {
-  margin: 0;
-  color: #ad1457;
-}
-
-/* Navigation */
-.headshot-designs-page nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.headshot-designs-page nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-.headshot-designs-page nav ul li a {
-  color: #d81b60;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.headshot-designs-page nav ul li a:hover {
-  color: #f06292;
-}
-
-/* Section */
-.headshot-designs-page section {
-  padding: 4rem;
-  background: #fce4ec;
-}
-
-/* GRID: 3 per row */
+/* Instagram-style GRID */
 .headshots-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-  margin-top: 3rem;
+  gap: 6px; /* tight like Instagram */
+  margin-top: 2rem;
 }
 
-/* Headshot card */
+/* Instagram-style post tile */
 .headshot-box {
   background-color: #f8bbd0;
-  padding: 2rem;
-  border-radius: 50%;
-  text-align: center;
-  aspect-ratio: 1 / 1; /* keeps perfect circle */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  aspect-ratio: 1 / 1; /* perfect square */
+  overflow: hidden;
+  padding: 0;
+  border-radius: 0; /* remove circle */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  transition: transform 0.2s ease;
 }
 
-/* Pink background on click */
-.headshot-box:active {
-  background-color: #ec407a;
+.headshot-box:hover {
+  transform: scale(1.02);
 }
 
-/* Image inside circle */
 .headshot-box img {
-  width: 70%;
-  height: auto;
-  border-radius: 50%;
-  border: 4px solid #ec407a;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills square */
+  border: none;
+  border-radius: 0;
 }
 
-/* Label */
 .headshot-box p {
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #880e4f;
-}
-
-/* Footer */
-.headshot-designs-page footer {
-  background-color: #f06292;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  background: rgba(236, 64, 122, 0.85); /* uses your pink */
   color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
   text-align: center;
-  padding: 2rem;
-  margin-top: 4rem;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .headshots-container {
     grid-template-columns: repeat(2, 1fr);
@@ -106,7 +51,17 @@ body.headshot-designs-page {
 
 @media (max-width: 500px) {
   .headshots-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+
+
+
+
+
+  
+
+
 
