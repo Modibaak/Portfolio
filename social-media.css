@@ -147,7 +147,7 @@ body.social-media-page {
   }
 }
 
-/* TELKOM CUSTOMER REVIEWS SECTION */
+/* TELKOM CUSTOMER REVIEWS - WIDE IMAGE FRIENDLY */
 .social-media-page .telkom-reviews-section {
   padding: 8rem 9% 5rem;
   background: #fce4ec;
@@ -161,48 +161,42 @@ body.social-media-page {
 }
 
 .social-media-page .telkom-reviews-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per row desktop */
-  gap: 2rem;
-  justify-items: center;
-  align-items: start;
+  display: flex;          /* flexible layout for wide images */
+  flex-wrap: wrap;        /* allow images to wrap on smaller screens */
+  justify-content: center;
+  gap: 2rem;              /* space between images */
 }
 
 .social-media-page .telkom-review-item {
-  width: 100%;
-  background-color: #f48fb1;
-  border-radius: 2rem;
-  box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
-  overflow: hidden;
+  flex: 1 1 30%;          /* each image takes ~30% of row, adjusts naturally */
+  max-width: 30rem;       /* prevents image from being too large */
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s ease;
 }
 
-.social-media-page .telkom-review-item:hover {
-  transform: translateY(-5px);
-  background-color: #ec407a;
+.social-media-page .telkom-review-item img {
+  width: 100%;            /* fills the item width */
+  height: auto;           /* keeps original aspect ratio */
+  border-radius: 1.5rem;  /* rounded corners */
+  display: block;
 }
 
-.social-media-page .telkom-review-item img {
-  width: 100%;
-  height: auto;          /* keeps original aspect ratio */
-  object-fit: contain;    /* prevents cropping */
-  display: block;
-  border-radius: 1.5rem;
+.social-media-page .telkom-review-item:hover {
+  transform: translateY(-5px);
 }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .social-media-page .telkom-reviews-gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row tablet */
+  .social-media-page .telkom-review-item {
+    flex: 1 1 45%;        /* 2 per row tablet */
   }
 }
 
 @media (max-width: 500px) {
-  .social-media-page .telkom-reviews-gallery {
-    grid-template-columns: 1fr; /* 1 per row mobile */
+  .social-media-page .telkom-review-item {
+    flex: 1 1 100%;       /* 1 per row mobile */
   }
 }
 
