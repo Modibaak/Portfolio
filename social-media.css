@@ -47,18 +47,16 @@ body.social-media-page {
   background: #fce4ec; /* pale pink */
 }
 
-/* Media Gallery */
+/* Media Gallery (Video Cards) */
 .social-media-page .video-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
   gap: 2rem;
+  justify-items: center;
 }
 
-/* Media Cards */
 .social-media-page .video-item {
-  flex: 1 1 30rem;
+  width: 100%;
   max-width: 30rem;
   background-color: #f48fb1; /* bubblegum pink */
   padding: 3rem 2rem;
@@ -73,17 +71,15 @@ body.social-media-page {
 
 .social-media-page .video-item:hover {
   transform: translateY(-5px);
-  background-color: #ec407a; /* hot pink */
+  background-color: #ec407a;
 }
 
-/* Titles */
 .social-media-page .video-item h3 {
   color: #880e4f;
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
 }
 
-/* Images */
 .social-media-page .video-item img {
   width: 100%;
   height: auto;
@@ -97,21 +93,21 @@ body.social-media-page {
 /* GLASSDOOR COLLATERAL SECTION */
 .social-media-page .glassdoor-section {
   padding: 10rem 9% 5rem;
-  background: #fce4ec; /* pale pink */
+  background: #fce4ec; /* same as other sections */
 }
 
 .social-media-page .glassdoor-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per row */
-  gap: 2rem; /* spacing between cards */
-  justify-items: center; /* center items in each column */
+  grid-template-columns: repeat(3, 1fr); /* 3 per row like videos */
+  gap: 2rem;
+  justify-items: center;
 }
 
 .social-media-page .glassdoor-item {
   width: 100%;
-  max-width: 30rem; /* same as video cards */
-  background-color: #f48fb1;
-  padding: 3rem 2rem; /* same as video cards */
+  max-width: 30rem;
+  background-color: #f48fb1; /* match video cards */
+  padding: 3rem 2rem;
   border-radius: 2rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
@@ -135,16 +131,18 @@ body.social-media-page {
   border: 3px solid #ec407a;
 }
 
-/* Responsive: Glassdoor images 2 per row on tablets, 1 per row on mobile */
+/* Responsive Layouts */
 @media (max-width: 900px) {
+  .social-media-page .video-gallery,
   .social-media-page .glassdoor-gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
   }
 }
 
 @media (max-width: 500px) {
+  .social-media-page .video-gallery,
   .social-media-page .glassdoor-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 per row on mobile */
   }
 }
 
