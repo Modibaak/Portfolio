@@ -1,46 +1,39 @@
-/* Instagram-style GRID */
+/* Instagram-style layout (but image-safe) */
 .headshots-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px; /* tight like Instagram */
+  gap: 12px;
   margin-top: 2rem;
 }
 
-/* Instagram-style post tile */
 .headshot-box {
   background-color: #f8bbd0;
-  aspect-ratio: 1 / 1; /* perfect square */
-  overflow: hidden;
   padding: 0;
-  border-radius: 0; /* remove circle */
+  border-radius: 12px; /* soft modern look */
+  overflow: hidden;
+  text-align: center;
   cursor: pointer;
-  position: relative;
   transition: transform 0.2s ease;
 }
 
 .headshot-box:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px);
 }
 
 .headshot-box img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* fills square */
+  height: auto;   /* keeps correct proportions */
+  display: block;
   border: none;
   border-radius: 0;
 }
 
 .headshot-box p {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   margin: 0;
-  padding: 8px;
-  background: rgba(236, 64, 122, 0.85); /* uses your pink */
-  color: white;
+  padding: 10px;
   font-weight: bold;
-  font-size: 0.9rem;
-  text-align: center;
+  color: #880e4f;
+  background-color: #fce4ec;
 }
 
 @media (max-width: 900px) {
@@ -51,7 +44,7 @@
 
 @media (max-width: 500px) {
   .headshots-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
