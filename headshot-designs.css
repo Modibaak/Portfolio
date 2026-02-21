@@ -1,15 +1,71 @@
-/* Instagram-style layout (but image-safe) */
+/* Page base */
+body.headshot-designs-page {
+  background-color: #ffe4e1;
+  font-family: 'Segoe UI', sans-serif;
+  color: #880e4f;
+  margin: 0;
+}
+
+/* Header */
+.headshot-designs-page header {
+  background-color: #f8bbd0;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 4px solid #ec407a;
+}
+
+.headshot-designs-page h1 {
+  margin: 0;
+  color: #ad1457;
+}
+
+/* Navigation */
+.headshot-designs-page nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.headshot-designs-page nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.headshot-designs-page nav ul li a {
+  color: #d81b60;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.headshot-designs-page nav ul li a:hover {
+  color: #f06292;
+}
+
+/* Section background (keeps page pink) */
+.headshot-designs-page section {
+  padding: 2rem;
+  background: #ffe4e1;
+}
+
+/* Instagram-style centered feed panel */
+.headshots-feed {
+  max-width: 900px;
+  margin: auto;
+  background: #fce4ec;
+  padding: 12px;
+  border-radius: 18px;
+}
+
+/* GRID layout */
 .headshots-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-top: 2rem;
 }
 
+/* Headshot card (no circles) */
 .headshot-box {
   background-color: #f8bbd0;
-  padding: 0;
-  border-radius: 12px; /* soft modern look */
+  border-radius: 12px;
   overflow: hidden;
   text-align: center;
   cursor: pointer;
@@ -20,14 +76,14 @@
   transform: translateY(-4px);
 }
 
+/* Image displays correctly */
 .headshot-box img {
   width: 100%;
-  height: auto;   /* keeps correct proportions */
+  height: auto;
   display: block;
-  border: none;
-  border-radius: 0;
 }
 
+/* Name caption */
 .headshot-box p {
   margin: 0;
   padding: 10px;
@@ -36,6 +92,16 @@
   background-color: #fce4ec;
 }
 
+/* Footer */
+.headshot-designs-page footer {
+  background-color: #f06292;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
   .headshots-container {
     grid-template-columns: repeat(2, 1fr);
@@ -47,14 +113,3 @@
     grid-template-columns: 1fr;
   }
 }
-
-
-
-
-
-
-
-  
-
-
-
