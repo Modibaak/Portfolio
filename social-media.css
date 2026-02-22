@@ -1,23 +1,23 @@
 /* SOCIAL MEDIA MANAGEMENT PAGE */
 
 body.social-media-page {
-  background-color: #ffe4e1; /* misty rose pink */
+  background-color: #ffe4e1;
   font-family: 'Segoe UI', sans-serif;
-  color: #880e4f; /* dark pink */
+  color: #880e4f;
 }
 
 /* Header */
 .social-media-page header {
-  background-color: #f8bbd0; /* light pink */
+  background-color: #f8bbd0;
   padding: 4rem 9%;
   text-align: center;
-  border-bottom: 4px solid #ec407a; /* hot pink */
+  border-bottom: 4px solid #ec407a;
 }
 
 .social-media-page h1 {
   margin-bottom: 1rem;
   font-size: 4rem;
-  color: #ad1457; /* dark rose pink */
+  color: #ad1457;
 }
 
 /* Navigation */
@@ -32,73 +32,51 @@ body.social-media-page {
 }
 
 .social-media-page nav ul li a {
-  color: #d81b60; /* vibrant pink */
+  color: #d81b60;
   text-decoration: none;
   font-weight: bold;
 }
 
 .social-media-page nav ul li a:hover {
-  color: #f06292; /* soft pink */
+  color: #f06292;
 }
 
-/* Section spacing */
+/* SECTION STRUCTURE */
 .social-media-page section {
-  padding: 10rem 9% 5rem;
-  background: #fce4ec; /* pale pink */
+  padding: 8rem 9% 5rem;
+  background: #fce4ec;
 }
 
-/* Media Gallery (Video Cards) */
+/* ================= VIDEO CAMPAIGNS ================= */
+
 .social-media-page .video-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   justify-items: center;
 }
 
-.social-media-page .video-item {
+.social-media-page .video-gallery > div {
   width: 100%;
   max-width: 30rem;
-  background-color: #f48fb1; /* bubblegum pink */
-  padding: 3rem 2rem;
+  background-color: #f48fb1;
+  padding: 2rem;
   border-radius: 2rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
   transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.social-media-page .video-item:hover {
+.social-media-page .video-gallery > div:hover {
   transform: translateY(-5px);
   background-color: #ec407a;
 }
 
-.social-media-page .video-item h3 {
-  color: #880e4f;
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.social-media-page .video-item img {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: contain;
-  border-radius: 1.5rem;
-  margin-top: 1rem;
-  border: 3px solid #ec407a;
-}
-
-/* GLASSDOOR COLLATERAL SECTION */
-.social-media-page .glassdoor-section {
-  padding: 10rem 9% 5rem;
-  background: #fce4ec; /* same as other sections */
-}
+/* ================= GLASSDOOR ================= */
 
 .social-media-page .glassdoor-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per row like videos */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   justify-items: center;
 }
@@ -106,15 +84,14 @@ body.social-media-page {
 .social-media-page .glassdoor-item {
   width: 100%;
   max-width: 30rem;
-  background-color: #f48fb1; /* match video cards */
-  padding: 3rem 2rem;
+  background-color: #f48fb1;
+  padding: 2rem;
   border-radius: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
   transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .social-media-page .glassdoor-item:hover {
@@ -125,66 +102,30 @@ body.social-media-page {
 .social-media-page .glassdoor-item img {
   width: 100%;
   height: auto;
-  max-height: 500px;
   object-fit: contain;
   border-radius: 1.5rem;
-  border: 3px solid #ec407a;
 }
 
+/* ================= TELKOM REVIEWS ================= */
 
-/* Responsive Layouts */
-@media (max-width: 900px) {
-  .social-media-page .video-gallery,
-  .social-media-page .glassdoor-gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
-  }
-}
-
-@media (max-width: 500px) {
-  .social-media-page .video-gallery,
-  .social-media-page .glassdoor-gallery {
-    grid-template-columns: 1fr; /* 1 per row on mobile */
-  }
-}
-
-/* TELKOM CUSTOMER REVIEWS - 2 per row desktop, last centered */
-.social-media-page .telkom-reviews-section {
-  padding: 8rem 9% 5rem;
-  background: #fce4ec;
-}
-
-.social-media-page .telkom-reviews-section h2 {
-  text-align: center;
-  color: #ad1457;
-  margin-bottom: 4rem;
-  font-size: 3rem;
-}
-
-/* Grid layout */
 .social-media-page .telkom-reviews-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row on desktop */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   justify-items: center;
-  align-items: start;
-}
-
-/* For odd number of items: center last one */
-.social-media-page .telkom-reviews-gallery > .telkom-review-item:last-child {
-  grid-column: 1 / -1; /* span all columns */
-  justify-self: center; /* center the item */
 }
 
 .social-media-page .telkom-review-item {
   width: 100%;
-  max-width: 45rem; /* matches videos/Glassdoor max width */
+  max-width: 30rem;
+  background-color: #f48fb1;
+  padding: 2rem;
+  border-radius: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s ease;
-  border-radius: 2rem;
-  overflow: hidden;
   box-shadow: 0 4px 8px rgba(233, 30, 99, 0.2);
+  transition: 0.3s ease;
 }
 
 .social-media-page .telkom-review-item:hover {
@@ -194,25 +135,38 @@ body.social-media-page {
 
 .social-media-page .telkom-review-item img {
   width: 100%;
-  height: auto;        /* keeps natural aspect ratio */
-  display: block;
+  height: auto;
+  object-fit: contain;
   border-radius: 1.5rem;
 }
 
-/* Responsive Layout */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 900px) {
-  .social-media-page .telkom-reviews-gallery {
-    grid-template-columns: 1fr; /* 1 per row tablet and below */
+
+  .social-media-page .video-gallery,
+  .social-media-page .glassdoor-gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* no special centering needed on small screens */
-  .social-media-page .telkom-reviews-gallery > .telkom-review-item:last-child {
-    grid-column: auto;
-    justify-self: auto;
+  .social-media-page .telkom-reviews-gallery {
+    grid-template-columns: 1fr;
   }
+
 }
 
-/* Footer */
+@media (max-width: 500px) {
+
+  .social-media-page .video-gallery,
+  .social-media-page .glassdoor-gallery,
+  .social-media-page .telkom-reviews-gallery {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ================= FOOTER ================= */
+
 .social-media-page footer {
   background-color: #f06292;
   color: white;
