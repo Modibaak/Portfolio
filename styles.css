@@ -273,9 +273,27 @@ line-height: 1.2;
   max-width: 650px;
 }
 
+/* ABOUT SECTION */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-content {
+    flex: 1;
+}
+
+
+/* TOOLS SECTION */
 .tools {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
     margin-top: 20px;
 }
@@ -291,21 +309,16 @@ line-height: 1.2;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    transition: 0.3s ease;
 }
 
 .tool i {
-    font-size: 45px;
+    font-size: 50px;
 }
 
 .tool span {
     font-size: 15px;
-    font-weight: 500;
 }
 
-.tool:hover {
-    transform: translateY(-5px);
-}
 
 /* Services Section Code */
 
