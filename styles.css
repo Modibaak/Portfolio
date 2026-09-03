@@ -218,14 +218,21 @@ span{
     box-shadow: 0 0 1.6rem var(--main-color);
 }
 
-/* About Section Code */
+/* About Section */
 
-.about{
+.about {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
     background: var(--snd-bg-color);
+}
+
+.about-img {
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: center;
 }
 
 .about-img img {
@@ -237,55 +244,31 @@ span{
     transition: 0.4s ease;
 }
 
-.about-img img:hover { 
-     box-shadow: 0 0 25px var(--main-color),
+.about-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
                 0 0 35px var(--main-color),
-                0 0 45px var(--main-color); 
-}
-
-.heading {
-    font-size: 6rem;
-    text-align: center;
-}
-
-.about-conent{ 
-    padding: 0rem;
-}
-
-.about-content h2 {
-text-align: left;
-line-height: 1.2;
-}
-
-.about-conent h3 {
-    font-size: 3rem;
-}
-
-.about-conent p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-}
-
-.about-content p {
-  margin-bottom: 1.5rem;   /* space between paragraphs */
-  line-height: 1.8;        /* readability */
-  font-size: 1.8rem;       /* slightly larger text */
-  max-width: 650px;
-}
-
-/* ABOUT SECTION */
-.about {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-}
-
-.about-img {
-    flex: 1;
+                0 0 45px var(--main-color);
 }
 
 .about-content {
     flex: 1;
+    padding: 0;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 3rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.8rem;
+    max-width: 650px;
 }
 
 
